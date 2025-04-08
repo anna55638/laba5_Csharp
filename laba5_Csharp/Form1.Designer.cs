@@ -39,7 +39,7 @@
             // 
             pbMain.Location = new Point(12, 12);
             pbMain.Name = "pbMain";
-            pbMain.Size = new Size(632, 426);
+            pbMain.Size = new Size(529, 303);
             pbMain.TabIndex = 0;
             pbMain.TabStop = false;
             pbMain.Paint += pbMain_Paint;
@@ -53,9 +53,9 @@
             // 
             // txtLog
             // 
-            txtLog.Location = new Point(650, 12);
+            txtLog.Location = new Point(547, 12);
             txtLog.Name = "txtLog";
-            txtLog.Size = new Size(166, 426);
+            txtLog.Size = new Size(166, 303);
             txtLog.TabIndex = 1;
             txtLog.Text = "";
             txtLog.TextChanged += richTextBox1_TextChanged;
@@ -64,7 +64,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 450);
+            ClientSize = new Size(719, 325);
             Controls.Add(txtLog);
             Controls.Add(pbMain);
             Name = "Form1";

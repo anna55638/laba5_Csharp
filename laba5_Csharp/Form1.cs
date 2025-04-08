@@ -19,24 +19,25 @@ namespace laba5_Csharp
                 txtLog.Text = $"[{DateTime.Now:HH:mm:ss:ff}] »грок пересекс€ с {obj}\n" + txtLog.Text;
             };
 
-            // добавил реакцию на пересечение с маркером
             player.OnMarkerOverlap += (m) =>
             {
                 objects.Remove(m);
                 marker = null;
             };
 
-            // остальное не трогаем
             marker = new Marker(pbMain.Width / 2 + 50, pbMain.Height / 2 + 50, 0);
 
             objects.Add(marker);
-
             objects.Add(player);
 
-            objects.Add(new MyRectangle(50, 50, 0));
-            objects.Add(new MyRectangle(100, 100, 45));
-
-            //myRect = new MyRectangle(100, 100, 45); // создать экземпл€р класса
+            // ”дал€ем пр€моугольники и добавл€ем 5 зеленых кружочков
+            for (int i = 0; i < 1; i++)
+            {
+                objects.Add(new GreenCircle(
+                    new Random().Next(20, pbMain.Width - 20),
+                    new Random().Next(20, pbMain.Height - 20),
+                    pbMain.Width, pbMain.Height));
+            }
         }
 
         private void pbMain_Paint(object sender, PaintEventArgs e)
